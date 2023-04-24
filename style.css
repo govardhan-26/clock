@@ -1,0 +1,99 @@
+
+body
+{
+
+    /* ff 3.6+ */
+    background:-moz-linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(38, 39, 40, 1) 50%, rgba(46, 43, 46, 1) 100%); 
+
+    /* safari 5.1+,chrome 10+ */
+    background:-webkit-linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(38, 39, 40, 1) 50%, rgba(46, 43, 46, 1) 100%);
+
+    /* opera 11.10+ */
+    background:-o-linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(38, 39, 40, 1) 50%, rgba(46, 43, 46, 1) 100%);
+
+    /* ie 6-9 */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2E2B2E', endColorstr='#242424', GradientType=0 );
+
+    /* ie 10+ */
+    background:-ms-linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(38, 39, 40, 1) 50%, rgba(46, 43, 46, 1) 100%);
+
+    /* global 94%+ browsers support */
+    background:linear-gradient(90deg, rgba(36, 36, 36, 1) 0%, rgba(38, 39, 40, 1) 50%, rgba(46, 43, 46, 1) 100%);
+
+}
+
+
+
+html{
+    background-color: black;
+    font-family:'helvetica neue';
+    text-align: center;
+    font-size: 10px;
+}
+
+body{
+    display: flex;
+    font: 2rem;
+    flex : 1;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.clock{
+    background-color: skyblue;
+    width: 30rem;
+    height: 30rem;
+    border: 10px solid yellow;
+    border-radius: 50%;
+    margin: 50px auto;
+}
+
+.clock-face{
+    position: relative;
+    width: 100%;
+    height : 100%;
+    transform: translateY(-3px);
+}
+
+.hand {
+    background:black;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, .5);
+    height:6px;
+    position: absolute;
+    right: 50%;
+    top:50%;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+    transition: all 0.05s;
+    width:50%;
+  }
+  
+  .hour-hand {
+    border-bottom-left-radius: 0.5em;
+    border-top-left-radius: 0.5em;
+    height: 10px;
+    width: 40%;
+  }
+  
+  
+  .min-hand {
+    height: 5px;
+  }
+  
+  .second-hand {
+    height: 2px;
+    background-color: #eeaf1e;
+    width: 54%;
+  }
+  
+  .second-hand::before {
+    background-color: #eeaf1e;
+    border-radius: 50%;
+    content: "";
+    height: 10px;
+    left: 95.5%;
+    position: absolute;
+    top: -4px;
+    width: 10px;
+  }
