@@ -6,7 +6,7 @@ const hourHand = document.querySelector('.hour-hand');
 function setDate() {
   const now = new Date();
   const seconds = now.getSeconds();
-  const secondsDegrees = ((seconds / 60) * 360) + 90; // 這邊要 + 90 (因為 css 的 transform: rotate(90deg) 的關係；要加回 90 這樣秒針的位置才會正確(才會是上下對位(本來是左右對位))
+  const secondsDegrees = ((seconds / 60) * 360) + 90; 
   secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
 
   const mins = now.getMinutes();
